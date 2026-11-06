@@ -63,6 +63,13 @@
   var close = function () { post({ type: 'close' }); return ''; };
   var recharge = function () { post({ type: 'recharge' }); return ''; };
 
+  // Oyunun SDK'sı senkron cevapları {"params": "<json>"} zarfında bekler
+  // (zarfsız gelirse kullanıcı bilgisini undefined görüp açılışta takılıyor).
+  function wrap(v) {
+    return JSON.stringify({ params: typeof v === 'string' ? v : JSON.stringify(v) });
+  }
+  function wrapped(fn) { return function (p) { return wrap(fn(p)); }; }
+
   var api = {
     getUserInfo: userJson,
     getUserInfoNew: userJson,
@@ -109,10 +116,26 @@
     }
   };
 
+  // Değer döndüren getter'ları zarfla (eylem metotları hariç)
+  ['getUserInfo', 'getUserInfoNew', 'GetUserInfo', 'getUserCoin', 'getRoomId', 'getToken', 'getFunId',
+   'getAppVersionCode', 'isNativeAsset', 'getAppPerformance', 'getDeviceMemory', 'getMicAndSoundState',
+   'getWebLocalData'].forEach(function (k) { api[k] = wrapped(api[k]); });
+
   // Oyunun çağırabileceği bilinmeyen metotlar hata fırlatmasın
   window.fun = typeof Proxy === 'function'
     ? new Proxy(api, { get: function (t, k) { return k in t ? t[k] : noop; } })
     : api;
+
+  // iOS / Android dışı yol: oyunun HTML'i getter'ları window.prompt(method) ile çağırıyor.
+  // Sadece bilinen metotlar cevaplanır; gerçek bir prompt diyaloğu asla açılmaz.
+  window.prompt = function (method, param) {
+    if (typeof method !== 'string') return null;
+    if (method === 'h5ToNative') return api.h5ToNative(param);
+    if (Object.prototype.hasOwnProperty.call(api, method)) {
+      try { return api[method](param); } catch (e) { return null; }
+    }
+    return null;
+  };
 
   // ── Flutter → Oyun ────────────────────────────────────────────────────
   window.__zabuEmit = function (event, params) {
