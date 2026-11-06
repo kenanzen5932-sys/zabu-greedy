@@ -1,0 +1,237 @@
+
+box_open2.png
+size: 1435,793
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+coin1
+  rotate: true
+  xy: 462, 205
+  size: 486, 271
+  orig: 605, 600
+  offset: 66, 164
+  index: -1
+coins1
+  rotate: false
+  xy: 1221, 26
+  size: 103, 103
+  orig: 130, 130
+  offset: 14, 13
+  index: -1
+coins10
+  rotate: false
+  xy: 1221, 133
+  size: 103, 104
+  orig: 131, 131
+  offset: 14, 13
+  index: -1
+coins11
+  rotate: false
+  xy: 545, 97
+  size: 83, 104
+  orig: 111, 129
+  offset: 14, 12
+  index: -1
+coins12
+  rotate: true
+  xy: 543, 22
+  size: 71, 104
+  orig: 102, 129
+  offset: 16, 13
+  index: -1
+coins13
+  rotate: false
+  xy: 632, 97
+  size: 58, 104
+  orig: 81, 132
+  offset: 12, 15
+  index: -1
+coins14
+  rotate: true
+  xy: 651, 11
+  size: 66, 95
+  orig: 96, 121
+  offset: 15, 13
+  index: -1
+coins15
+  rotate: false
+  xy: 455, 115
+  size: 86, 86
+  orig: 109, 105
+  offset: 12, 9
+  index: -1
+coins16
+  rotate: true
+  xy: 1010, 494
+  size: 91, 81
+  orig: 120, 100
+  offset: 15, 10
+  index: -1
+coins17
+  rotate: true
+  xy: 1328, 73
+  size: 93, 86
+  orig: 121, 100
+  offset: 12, 7
+  index: -1
+coins18
+  rotate: true
+  xy: 455, 13
+  size: 98, 84
+  orig: 125, 93
+  offset: 14, 4
+  index: -1
+coins19
+  rotate: true
+  xy: 1328, 170
+  size: 105, 91
+  orig: 125, 102
+  offset: 12, 5
+  index: -1
+coins2
+  rotate: false
+  xy: 1010, 589
+  size: 84, 102
+  orig: 110, 129
+  offset: 13, 13
+  index: -1
+coins20
+  rotate: false
+  xy: 1260, 279
+  size: 105, 99
+  orig: 125, 115
+  offset: 11, 8
+  index: -1
+coins3
+  rotate: true
+  xy: 1328, 2
+  size: 67, 101
+  orig: 100, 128
+  offset: 16, 13
+  index: -1
+coins4
+  rotate: true
+  xy: 750, 18
+  size: 59, 100
+  orig: 86, 126
+  offset: 14, 13
+  index: -1
+coins5
+  rotate: true
+  xy: 854, 20
+  size: 57, 100
+  orig: 79, 123
+  offset: 11, 11
+  index: -1
+coins6
+  rotate: false
+  xy: 1369, 280
+  size: 59, 101
+  orig: 85, 126
+  offset: 13, 12
+  index: -1
+coins7
+  rotate: false
+  xy: 1364, 385
+  size: 69, 102
+  orig: 93, 128
+  offset: 12, 13
+  index: -1
+coins8
+  rotate: true
+  xy: 300, 11
+  size: 80, 103
+  orig: 105, 130
+  offset: 13, 13
+  index: -1
+coins9
+  rotate: false
+  xy: 1260, 382
+  size: 100, 105
+  orig: 124, 131
+  offset: 13, 13
+  index: -1
+congratution 1
+  rotate: false
+  xy: 462, 695
+  size: 632, 96
+  orig: 640, 96
+  offset: 0, 0
+  index: -1
+fsg1
+  rotate: false
+  xy: 2, 335
+  size: 456, 456
+  orig: 500, 500
+  offset: 22, 22
+  index: -1
+fsg2
+  rotate: false
+  xy: 300, 211
+  size: 118, 120
+  orig: 119, 122
+  offset: 0, 1
+  index: -1
+gq
+  rotate: false
+  xy: 1010, 241
+  size: 246, 246
+  orig: 246, 246
+  offset: 0, 0
+  index: -1
+guang1
+  rotate: false
+  xy: 1098, 491
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+guang2
+  rotate: true
+  xy: 737, 333
+  size: 358, 269
+  orig: 358, 269
+  offset: 0, 0
+  index: -1
+guangdian1
+  rotate: false
+  xy: 408, 106
+  size: 43, 43
+  orig: 45, 45
+  offset: 1, 1
+  index: -1
+guanghuan1
+  rotate: false
+  xy: 985, 5
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+guangqiu
+  rotate: false
+  xy: 2, 37
+  size: 294, 294
+  orig: 310, 310
+  offset: 8, 8
+  index: -1
+julongguang
+  rotate: true
+  xy: 737, 81
+  size: 248, 244
+  orig: 252, 253
+  offset: 0, 3
+  index: -1
+xx1
+  rotate: true
+  xy: 300, 95
+  size: 112, 104
+  orig: 112, 104
+  offset: 0, 0
+  index: -1
+xx2
+  rotate: true
+  xy: 408, 153
+  size: 54, 43
+  orig: 54, 48
+  offset: 0, 1
+  index: -1

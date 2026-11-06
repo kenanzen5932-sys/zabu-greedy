@@ -1,0 +1,76 @@
+
+pop_box_choose.png
+size: 1205,590
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+box_L
+  rotate: false
+  xy: 898, 395
+  size: 236, 191
+  orig: 291, 291
+  offset: 27, 52
+  index: -1
+box_R
+  rotate: false
+  xy: 898, 196
+  size: 234, 191
+  orig: 287, 287
+  offset: 29, 50
+  index: -1
+guang
+  rotate: false
+  xy: 591, 286
+  size: 301, 300
+  orig: 321, 321
+  offset: 10, 11
+  index: -1
+light
+  rotate: false
+  xy: 591, 55
+  size: 215, 223
+  orig: 215, 223
+  offset: 0, 0
+  index: -1
+lightBall_b
+  rotate: false
+  xy: 1025, 7
+  size: 177, 181
+  orig: 285, 285
+  offset: 54, 49
+  index: -1
+lightPoint_y3
+  rotate: false
+  xy: 591, 15
+  size: 32, 32
+  orig: 66, 63
+  offset: 18, 15
+  index: -1
+lock
+  rotate: false
+  xy: 812, 33
+  size: 207, 155
+  orig: 241, 182
+  offset: 13, 14
+  index: -1
+mask
+  rotate: false
+  xy: 1140, 566
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 812, 205
+  size: 71, 73
+  orig: 111, 111
+  offset: 20, 19
+  index: -1
+title_bgL
+  rotate: false
+  xy: 3, 4
+  size: 582, 582
+  orig: 600, 600
+  offset: 9, 9
+  index: -1

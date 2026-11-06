@@ -1,0 +1,76 @@
+
+box_open.png
+size: 1921,527
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+coin
+  rotate: true
+  xy: 2, 2
+  size: 523, 306
+  orig: 523, 306
+  offset: 0, 0
+  index: -1
+congratution 1
+  rotate: false
+  xy: 809, 96
+  size: 632, 96
+  orig: 640, 96
+  offset: 0, 0
+  index: -1
+guang1
+  rotate: false
+  xy: 1136, 225
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+guang2
+  rotate: false
+  xy: 1445, 25
+  size: 358, 269
+  orig: 358, 269
+  offset: 0, 0
+  index: -1
+light1
+  rotate: false
+  xy: 809, 196
+  size: 323, 329
+  orig: 373, 362
+  offset: 25, 23
+  index: -1
+light2
+  rotate: true
+  xy: 1807, 74
+  size: 220, 112
+  orig: 220, 112
+  offset: 0, 0
+  index: -1
+lv4_box
+  rotate: false
+  xy: 1445, 298
+  size: 450, 227
+  orig: 450, 227
+  offset: 0, 0
+  index: -1
+lv4_top1
+  rotate: true
+  xy: 312, 65
+  size: 460, 245
+  orig: 460, 245
+  offset: 0, 0
+  index: -1
+lv4_top2
+  rotate: true
+  xy: 561, 86
+  size: 439, 244
+  orig: 439, 244
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 312, 19
+  size: 41, 42
+  orig: 49, 52
+  offset: 3, 7
+  index: -1
