@@ -91,6 +91,8 @@
     closePageNew: close,
     closeLoadingPage: function () { post({ type: 'loaded' }); return ''; },
     closeLoadingPageNew: function () { post({ type: 'loaded' }); return ''; },
+    event_h5game_displayed: function () { post({ type: 'displayed' }); return ''; },
+    event_webview_success: function () { post({ type: 'loaded' }); return ''; },
     popUpBottomRecharge: recharge,
     showRechargeDialog: recharge,
     requestMsg: function (raw) {
