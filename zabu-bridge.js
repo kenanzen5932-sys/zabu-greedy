@@ -190,6 +190,14 @@
     }, 0);
   }
 
+  // Tur no: sunucudaki mutlak no (epoch/25) yerine günün kaçıncı turu
+  // (İstanbul saatiyle 00:00'da 1'den başlar; günde 3456 tur)
+  function dailyRound(id) {
+    var n = Number(id);
+    if (!isFinite(n)) return id;
+    return Math.floor(((n * 25 + 10800) % 86400) / 25) + 1;
+  }
+
   function mapRecords(list) {
     var out = [];
     for (var i = 0; i < list.length; i++) {
@@ -202,7 +210,7 @@
         betMap[k] = (betMap[k] || 0) + (Number(b.amount) || 0);
       }
       out.push({
-        roundId: r.round_id,
+        roundId: dailyRound(r.round_id),
         settleTime: Date.parse(r.time) || Date.now(),
         foodId: r.result_food,
         win: Number(r.win) || 0,
@@ -297,8 +305,18 @@
           var r = origSet.apply(this, arguments);
           try {
             var sp = this.sprite;
-            var mat = sp && sp.customMaterial;
-            if (mat && frame) { sp.customMaterial = null; sp.customMaterial = mat; }
+            if (sp && frame) {
+              var mat = this.__zabuMat || sp.customMaterial;
+              if (mat) {
+                this.__zabuMat = mat;
+                if (String(this._url || '').indexOf('data:') === 0) {
+                  // Flutter'dan gelen hazır yuvarlak avatar: shader'a gerek yok
+                  sp.customMaterial = null;
+                } else {
+                  sp.customMaterial = null; sp.customMaterial = mat;
+                }
+              }
+            }
           } catch (e) { /* */ }
           return r;
         };
@@ -355,8 +373,10 @@
     var cc = window.cc;
     if (!cc || !cc.view || !cc.ResolutionPolicy || !cc.game || !cc.game.inited) return false;
     var w = window.innerWidth || 1, h = window.innerHeight || 1;
+    // Uzun alan: NO_BORDER → oyun alanı tamamen kaplar (üstte ince boş/siyah
+    // şerit kalmaz; fark birkaç piksel, yanlardan kırpılır). Kısa alan: SHOW_ALL.
     var tall = h / w >= (1334 / 750) - 0.02;
-    var pol = tall ? cc.ResolutionPolicy.FIXED_WIDTH : cc.ResolutionPolicy.SHOW_ALL;
+    var pol = tall ? cc.ResolutionPolicy.NO_BORDER : cc.ResolutionPolicy.SHOW_ALL;
     if (pol !== lastPolicy) {
       try { cc.view.setDesignResolutionSize(750, 1334, pol); lastPolicy = pol; } catch (e) { /* */ }
     }
